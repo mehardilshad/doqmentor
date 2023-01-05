@@ -1,0 +1,39 @@
+.slick-slider {
+    width: 100% !important;
+    margin: 0 auto !important;
+    height: 100% !important;
+}
+
+.slick-current {
+    /* filter: blur(0rem) !important; */
+    /* transform: scale(1, 1) !important; */
+    top: 3% !important;
+    left: 455px !important;
+    margin: 0px 60px !important;
+    /* height: 420px; */
+    filter: blur(1px) !important;
+}
+
+.slick-active {
+    /* filter: blur(0.2rem) !important; */
+}
+.slick-cloned {
+}
+
+.slick-center {
+    transform: scale(1) !important;
+    /* width: 300px !important; */
+    filter: blur(0px) !important;
+    min-height: 300px;
+}
+.slick-track {
+    /* padding: 20px 0 !important; */
+    /* height: 375px !important; */
+}
+.slick-list {
+    /* padding: 50px 0; */
+    /* height: 420px; */
+}
+.slick-slide {
+    filter: blur(2px);
+}
