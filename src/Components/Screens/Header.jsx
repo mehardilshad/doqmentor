@@ -14,25 +14,27 @@ export default function Header() {
     window.scrollTo(0, 0)
   }
 
-  // var prevScrollpos = window.pageYOffset
-  // const handleScroll = () => {
-  //   var currentScrollPos = window.pageYOffset
-  //   if (prevScrollpos > currentScrollPos) {
-  //     if (document.getElementById('navbar')) {
-  //       document.getElementById('navbar').style.top = '0'
-  //       document.getElementById('navbar').style.transition = 'all 0.8s'
-  //     }
-  //   } else if (prevScrollpos <= 30) {
-  //     document.getElementById('navbar').style.top = '0'
-  //   } else {
-  //     document.getElementById('navbar').style.top = '-200px'
-  //   }
-  //   prevScrollpos = currentScrollPos
-  // }
+  var prevScrollpos = window.pageYOffset
+  const handleScroll = () => {
+    var currentScrollPos = window.pageYOffset
+    if (prevScrollpos > currentScrollPos) {
+      if (document.getElementById('navbar')) {
+        document.getElementById('navbar').style.top = '0'
+        document.getElementById('navbar').style.transition = 'all 0.8s'
+      }
+    } else if (prevScrollpos <= 30) {
+      document.getElementById('navbar').style.top = '0'
+    } else {
+      document.getElementById('navbar').style.top = '-200px'
+    }
+    prevScrollpos = currentScrollPos
+  }
 
-  // useEffect(() => {
-  //   window.addEventListener('scroll', handleScroll)
-  // })
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+  })
+
 
   return (
     <>
@@ -53,7 +55,7 @@ export default function Header() {
             </Link>
           </Logo>
           <Nav>
-            <NavItem activeClassName="active" to="/" onClick={scroll}>
+            <NavItem activeClassName="active" to="/">
               Home
             </NavItem>
             <NavItem activeClassName="active" to="/about">
@@ -84,6 +86,7 @@ const Container = styled.div`
   left: 0;
   z-index: 1000;
   /* background: rgba(255, 255, 255, 0.5); */
+  padding: 20px 0;
   background: #fff;
   & .wrapper {
     width: 85%;
@@ -95,7 +98,7 @@ const Container = styled.div`
   }
 `
 const Logo = styled.h1`
-      width: 110px;
+    width: 110px;
     margin: 0;
   @media all and (max-width: 980px) {
     width: 60px;
@@ -115,9 +118,9 @@ const Nav = styled.nav`
     display: none;
   }
 `
-const NavItem = styled.a`
+const NavItem = styled(Link)`
   font-size: 20px;
-  color: #000;
+  color: #444444;
   margin-right: 50px;
   cursor: pointer;
   text-decoration: none;
@@ -127,11 +130,11 @@ const NavItem = styled.a`
   }
 
   &.active {
-    color: #0fa76f;
+    color: #01a9fe;
   }
 
   &:hover {
-    color: #0fa76f;
+    color: #01a9fe;
   }
   @media all and (max-width: 1280px) {
     margin-right: 40px;

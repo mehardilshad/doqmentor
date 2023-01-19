@@ -1,14 +1,22 @@
 import React from 'react'
+import styled from 'styled-components'
 import Header from './Header'
-import TermsAndConditions from './Service'
+import Service from './Service'
 
 function LandingPage() {
   return (
-    <div>
+    <Cover>
       <Header />
-      <TermsAndConditions/>
-    </div>
+      {/* <TermsAndConditions/> */}
+      <Service />
+    </Cover>
   )
 }
 
 export default LandingPage
+
+const Cover = styled.div `
+  /* height: 100vh;
+  background: #d8efff; */
+
+`;

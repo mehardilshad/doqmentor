@@ -42,9 +42,10 @@ function Service() {
 
 export default Service
 const MainContainer = styled.div`
-  height: 80vh;
-  padding: 175px 0 0 0;
-  background: #dcf7dc;
+  height: 100vh;
+  padding: 195px 0 0 0;
+  background: #d8efff;
+
 `
 const Cover = styled.div`
   width: 85%;
@@ -57,7 +58,7 @@ const Heading = styled.h1`
 const Bottomcontainer = styled(Link)`
   width: 50%;
   background: #f4f4f4;
-  padding: 50px;
+  padding: 30px;
   border-radius: 7px;
   text-decoration: none;
   color: #000;
@@ -66,6 +67,7 @@ const CardContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 30px;
+  text-align: center;
 `
 const Title = styled.h2`
   font-size: 18px;

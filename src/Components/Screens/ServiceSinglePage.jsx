@@ -22,6 +22,9 @@ function Service() {
           <Bottomcontainer to="service-form">
             <Title>Service 3</Title>
           </Bottomcontainer>
+          <Bottomcontainer to="service-form">
+            <Title>Service 4</Title>
+          </Bottomcontainer>
         </CardContainer>
       </Cover>
     </MainContainer>
@@ -33,7 +36,7 @@ export default Service
 const MainContainer = styled.div`
   height: 90vh;
   padding: 180px 0 0px 0;
-  background: #dcf7dc;
+  background: #a9dbff75;
 `
 const Cover = styled.div`
   width: 85%;
@@ -44,9 +47,9 @@ const Heading = styled.h1`
   margin: 0 0 25px 0;
 `
 const Bottomcontainer = styled(Link)`
-  width: 55%;
+  width: 75%;
   background: #f4f4f4;
-  padding: 50px;
+  padding: 40px 0;
   border-radius: 7px;
   text-decoration: none;
   color: #000;
@@ -54,7 +57,7 @@ text-align: center;
 `
 const CardContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 30px;
 `
 const Title = styled.h2`
